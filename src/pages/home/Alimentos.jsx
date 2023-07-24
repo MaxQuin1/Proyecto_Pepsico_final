@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import CardProductos from "../../components/CardProductos";
 
-export default function Bebidas() {
+export default function Alimentos() {
   const [productos, setProductos] = useState([]);
   useEffect(function () {
     axios
