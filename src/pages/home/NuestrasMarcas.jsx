@@ -21,7 +21,7 @@ export default function NuestrasMarcas() {
   return (
     <div>
       <Navbar2></Navbar2>
-      <div className="grid grid-cols-5 mt-[15%] mb-15 mx-10 border-none px-6 w-[100%]">
+      <div className="grid grid-cols-5 mt-[15%] mb-20 mx-10 border-none px-6 w-[100%]">
         {marcas.map(function (marca) {
           return <CardMarcas key={marca.index} imagen={marca.imagen} />;
         })}

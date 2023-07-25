@@ -7,12 +7,13 @@ import axios from "axios";
 import CardProductos from "../../components/CardProductos";
 
 export default function Alimentos() {
-  const [productos, setProductos] = useState([]);
+  const nombre = 'galleta';
+  const [alimentos, setAlimentos] = useState([]);
   useEffect(function () {
     axios
-      .get("http://localhost:3001/productos")
+      .get("http://localhost:3001/busquedas/nombre/"+ nombre)
       .then(function (datos) {
-        setProductos(datos.data);
+        setAlimentos(datos.data);
       })
       .catch(() => {
         console.error("tenemos un problema");
@@ -23,16 +24,16 @@ export default function Alimentos() {
       <>
         <Navbar2></Navbar2>
         <div className="grid grid-cols-4 gap-8 mt-8 mx-10 p-10">
-          {productos.map(function (producto) {
+          {alimentos.map(function (alimento) {
             return (
               <CardProductos
-                key={producto.id}
-                index={producto.id_producto}
-                imagen={producto.imagen}
-                nombre={producto.nombre}
-                descripcion={producto.descripcion}
-                precio={producto.precio}
-                marca={producto.marca}
+                key={alimento.index}
+                index={alimento.id_producto}
+                imagen={alimento.imagen}
+                nombre={alimento.nombre}
+                descripcion={alimento.descripcion}
+                precio={alimento.precio}
+                marca={alimento.marca}
               />
             );
           })}

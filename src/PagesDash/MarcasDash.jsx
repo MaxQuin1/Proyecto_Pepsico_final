@@ -23,14 +23,21 @@ export default function MarcasDash() {
       <NavDash />
         <h1 className="text-center text-4xl text-black">Marcas</h1>
         <div className="flex flex-row gap-[50%]">
+          <div className="ml-[19%] mb-0 mt-5">
+            <input
+              className="border rounded-xl bg-white outline-none dark:bg-[#242424] dark:text-white] py-1"
+              type="search"
+              placeholder="Buscar marca"
+            ></input>
+          </div>
           <div className='flex justify-end w-[90%]'> 
             <a href="addmarcas">
-              <button className="bg-green-500 hover:bg-green-600 text-white text-1xl font-bold py-2 px-4 rounded-[100%]">
+              <button className="fixed bg-green-500 hover:bg-green-600 bottom-15 right-9 text-white text-3xl font-bold pt-1 pb-2 px-4 rounded-[100%]">
                 +
               </button>
             </a>
           </div>
-        </div>
+          </div>
         <div className="flex justify-center mt-5 mb-20 max-h-80 overflow-y-auto table-auto">
           <table className="ml-[14%] table-fixed border border-indigo-800">
             <thead className="">

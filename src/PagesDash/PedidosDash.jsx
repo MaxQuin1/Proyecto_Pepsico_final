@@ -32,7 +32,7 @@ export default function PedidosDash (){
           </div>
           <div>
             <a href="addpedidos">
-              <button className="bg-green-500 hover:bg-green-600 text-white text-1xl font-bold py-2 px-4 rounded-[100%]">
+              <button className="fixed bg-green-500 hover:bg-green-600 bottom-15 right-9 text-white text-3xl font-bold pt-1 pb-2 px-4 rounded-[100%]">
                 +
               </button>
             </a>

@@ -31,12 +31,12 @@ export default function ClinetesDash() {
       <NavDash />
         <h1 className="text-center text-4xl text-black">Clientes</h1>
         <div className="flex flex-row gap-[50%]">
-          <div className='flex justify-end w-[90%]'> 
-            <a href="addclientes">
-              <button className="bg-green-500 hover:bg-green-600 text-white text-1xl font-bold py-2 px-4 rounded-[100%]">
-                +
-              </button>
-            </a>
+          <div className="ml-[19%] mb-0 mt-5">
+            <input
+              className="border rounded-xl bg-white outline-none dark:bg-[#242424] dark:text-white] py-1"
+              type="search"
+              placeholder="Buscar cliente"
+            ></input>
           </div>
         </div>
         <div className="flex justify-center mt-5 mb-20 max-h-80 overflow-y-auto table-auto">
@@ -45,6 +45,7 @@ export default function ClinetesDash() {
               <tr className="bg-indigo-800">
                 <th className="text-white">#</th>
                 <th className="text-white"> Nombre</th>
+                <th className="text-white"> Email</th>
                 <th className="text-white"> Contrasena</th>
                 <th className="text-white">Direccion</th>
                 <th className="text-white">Estado</th>
@@ -52,11 +53,12 @@ export default function ClinetesDash() {
               </tr>
             </thead>
             <tbody className="">
-              {clientes.map((cliente) => (
+              {clientes.map((cliente,index) => (
                 <tr key={cliente.index}>
                   <td className="px-4 py-2">{c++}</td>
                   <td className="px-4 py-2">{cliente.nombre} </td>
                   <td className="px-4 py-2">{cliente.email} </td>
+                  <td className="px-4 py-2">{cliente.contrasena} </td>
                   <td className="px-4 py-2"> {cliente.direccion} </td>
                   <td className="px-4 py-2"> {cliente.estado} </td>
                   <td className="px-4 py-2">
