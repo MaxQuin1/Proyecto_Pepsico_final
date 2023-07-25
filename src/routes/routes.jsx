@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 // home
 import Navbar from "../components/Navbar";
 import Home from "../pages/home/Home";
-import HomeDash from '../PagesDash/HomeDash';
+import HomeDash from '../pagesDash/HomeDash';
 import Alimentos from "../pages/home/Alimentos";
 import Bebidas from "../pages/home/Bebidas";
 import Ofertas from "../pages/home/Ofertas";
@@ -13,19 +13,19 @@ import Register from "../pages/auth/Register";
 // productos
 import CardProductos from '../components/CardProductos';
 import CardProducto from "../components/CardProducto";
-import ProductosDash from "../PagesDash/ProductosDash";
+import ProductosDash from "../pagesDash/ProductosDash";
 import AddProductos from '../pages/catalogsDash/AddProductos'
 // marcas
 import NuestrasMarcas from "../pages/home/NuestrasMarcas";
-import MarcasDash from "../PagesDash/MarcasDash";
+import MarcasDash from "../pagesDash/MarcasDash";
 import AddMarcas from '../pages/catalogsDash/AddMarcas';
 // pedidos
-import PedidosDash from "../PagesDash/PedidosDash";
+import PedidosDash from "../pagesDash/PedidosDash";
 import AddPedidos from "../pages/catalogsDash/AddPedidos";
 // clientes
-import ClientesDash from "../PagesDash/ClientesDash";
+import ClientesDash from "../pagesDash/ClientesDash";
 // categorias
-import CategoriasDash from "../PagesDash/CategoriasDash";
+import CategoriasDash from "../pagesDash/CategoriasDash";
 
 import Error from "../pages/error/Error";
 
