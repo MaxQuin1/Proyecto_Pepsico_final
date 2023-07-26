@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className="">
       <Navbar2></Navbar2>
-      <Link to="/products">
+      <Link to="/productos">
         <div className=" bg-fondo bg-blue-400 p-0 flex flex-col items-center justify-center gap-4 rounded-2xl h-[29em] max-w-100xl m-auto"></div>
       </Link>
       <h1 className="text-center mt-9">Marcas</h1>
@@ -42,7 +42,7 @@ export default function Home() {
           return <CardMarcas key={marca.index} imagen={marca.imagen} />;
         })}
       </div>
-      <Link to="../catalogs/products">
+      <Link to="../productos">
         <div className="bg-fondo1 p-0 flex flex-col items-center justify-center h-[26rem] max-w-100xl m-auto">
           <div className="max-w-6xl mt-80 p-0">
             <h1 className="text-20xl text-white ">
@@ -51,7 +51,7 @@ export default function Home() {
           </div>
         </div>
       </Link>
-      <div className="grid grid-cols-4 gap-8 mt-8 mx-10 p-10">
+      <div className="grid grid-cols-4 gap-8 mt-8 mx-10 p-20 max-h-[450px] overflow-y-auto">
         {productos.map(function (producto) {
           return (
             <CardProductos

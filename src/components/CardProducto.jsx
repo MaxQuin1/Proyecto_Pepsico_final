@@ -5,7 +5,6 @@ import axios from "axios";
 
 export default function CardProducto() {
   const index = window.location.href.split("/")[4];
-
   const [producto, setProducto] = useState([]);
 
   useEffect(function () {
@@ -18,19 +17,22 @@ export default function CardProducto() {
       .catch(() => {
         console.error("tenemos un problema");
       });
-  }, []);
+  },);
   return (
     <div>
       <>
         <Navbar2></Navbar2>
-        <div>
-          <h1>{producto.nombre}</h1>;
-          <aside
-            id="sidebar-multi-level-sidebar"
-            className="fixed top-[30%] left-0 h-[80%] z-40 w-[200px] transition-transform -translate-x-full sm:translate-x-0 "
-            aria-label="Sidebar">
-            <h4 className="text-center">Otros Sabores</h4>
-          </aside>
+        <div className="container mx-auto p-8">
+          <h1 className="text-3xl font-semibold mb-4">Ecommerce Store</h1>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+              <tr key={producto.index}>
+                <p className="px-4 py-2">{producto.nombre} </p>
+                <p className="px-4 py-2"> {producto.descripcion} </p>
+                <p className="px-4 py-2"> {producto.precio} </p>
+                <p className="px-4 py-2"> {producto.marca} </p>
+                {producto.imagen}
+              </tr>
+          </div>
         </div>
       </>
     </div>

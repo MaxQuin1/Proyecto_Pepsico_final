@@ -6,12 +6,11 @@ import HomeDash from '../pagesDash/HomeDash';
 import Alimentos from "../pages/home/Alimentos";
 import Bebidas from "../pages/home/Bebidas";
 import Ofertas from "../pages/home/Ofertas";
-import AcercaDe from "../pages/home/Acercade";
 // cuentas
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 // productos
-import CardProductos from '../components/CardProductos';
+import Productos from "../pages/home/Productos";
 import CardProducto from "../components/CardProducto";
 import ProductosDash from "../pagesDash/ProductosDash";
 import AddProductos from '../pages/catalogsDash/AddProductos'
@@ -54,14 +53,10 @@ export const rutas = createBrowserRouter([
         path: "ofertas",
         element: <Ofertas/>
       },
-      {
-        path: "acercade",
-        element: <AcercaDe />,
-      },
       //productos rutas
       {
         path: "productos",  
-        element: <CardProductos />,
+        element: <Productos />,
       },
       {
         path: "producto/:index",  

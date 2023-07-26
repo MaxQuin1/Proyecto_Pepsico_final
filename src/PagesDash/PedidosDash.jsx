@@ -53,7 +53,7 @@ export default function PedidosDash (){
               {pedidos.map((pedido) => (
                 <tr key={pedido.index}>
                   <td className="px-4 py-2">{c++}</td>
-                  <td className="px-4 py-2">{pedido.nombre_cliente} </td>
+                  <td className="w-40 px-4 py-2">{pedido.nombre_cliente} </td>
                   <td className="px-4 py-2"> {pedido.fecha} </td>
                   <td className="px-4 py-2"> {pedido.total} </td>
                   <td className="px-4 py-2">

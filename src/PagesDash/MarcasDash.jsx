@@ -53,7 +53,7 @@ export default function MarcasDash() {
                 <tr key={marca.index}>
                   <td className="px-4 py-2">{c++}</td>
                   <td className="px-4 py-2">{marca.nombre} </td>
-                  <td className="px-4 py-2"> {marca.imagen} </td>
+                  <td className="w-40 px-4 py-2"> {marca.imagen} </td>
                   <td className="px-4 py-2">
                     <a href="updateproductos">
                       <button className="bg-yellow-400 hover:bg-yellow-600 text-white text-1xl font-bold py-2 px-4 mx-1">

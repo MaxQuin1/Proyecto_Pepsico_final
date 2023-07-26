@@ -53,22 +53,24 @@ function ProductosDash() {
             <tbody className="">
               {productos.map((producto) => (
                 <tr key={producto.index}>
-                  <td className="px-4 py-2">{c++}</td>
-                  <td className="px-4 py-2">{producto.nombre} </td>
-                  <td className="px-4 py-2"> {producto.descripcion} </td>
-                  <td className="px-4 py-2"> {producto.precio} </td>
-                  <td className="px-4 py-2"> {producto.marca} </td>
-                  <td className="px-4 py-2">
+                  <td className="px-5">{c++}</td>
+                  <td className="w-40 px-5 py-3">{producto.nombre} </td>
+                  <td className="w-40"> {producto.descripcion} </td>
+                  <td className="px-5"> {producto.precio} </td>
+                  <td className=""> {producto.marca} </td>
+                  <td className="">
+                    <div className="flex flex-row">
                     <a href="updateproductos">
-                      <button className="bg-yellow-400 hover:bg-yellow-600 text-white text-1xl font-bold py-2 px-4 mx-1">
+                      <button className="bg-yellow-400 hover:bg-yellow-600 text-white text-1xl font-bold mx-1">
                         Actualizar
                       </button>
                     </a>
                     <a href="eliminarproductos">
-                      <button className="bg-red-400 hover:bg-red-600 text-white text-1xl font-bold py-2 px-4 mx-1">
+                      <button className="bg-red-400 hover:bg-red-600 text-white text-1xl font-bold mx-1">
                         Eliminar
                       </button>
                     </a>
+                    </div>
                   </td>
                 </tr>
               ))}

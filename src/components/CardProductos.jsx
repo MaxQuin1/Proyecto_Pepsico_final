@@ -7,7 +7,6 @@ export default function CardProductos({index, imagen, nombre, descripcion, preci
                 <img src={imagen} className="w-30 h-30 object-cover rounded-xl"/>
                 <div className="items items-center justify-center place-content-cente text-center">
                     <h1 className="text-center text-xl text-black">{nombre}</h1>
-                    <p className="text-centertext-black ">{descripcion}</p>
                     <p className="text-center text-black">${precio}</p>
                     <h3 className="text-center text-xl text-black">{marca}</h3>
                 </div>

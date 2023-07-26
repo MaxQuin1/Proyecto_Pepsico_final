@@ -57,9 +57,9 @@ export default function ClinetesDash() {
                 <tr key={cliente.index}>
                   <td className="px-4 py-2">{c++}</td>
                   <td className="px-4 py-2">{cliente.nombre} </td>
-                  <td className="px-4 py-2">{cliente.email} </td>
-                  <td className="px-4 py-2">{cliente.contrasena} </td>
-                  <td className="px-4 py-2"> {cliente.direccion} </td>
+                  <td className="w-24 px-4 py-2">{cliente.email} </td>
+                  <td className="px-4 py-2">************ </td>
+                  <td className="w-40 px-4 py-2"> {cliente.direccion} </td>
                   <td className="px-4 py-2"> {cliente.estado} </td>
                   <td className="px-4 py-2">
                     <a href="updateproductos">

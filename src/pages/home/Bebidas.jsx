@@ -7,11 +7,11 @@ import axios from "axios";
 import CardProductos from "../../components/CardProductos";
 
 export default function Bebidas() {
-  const nombre = 'Gatoraide';
+  const descripcion = 'bebida';
   const [alimentos, setAlimentos] = useState([]);
   useEffect(function () {
     axios
-      .get("http://localhost:3001/busquedas/nombre/"+ nombre)
+      .get("http://localhost:3001/busquedas/descripcion/"+ descripcion)
       .then(function (datos) {
         setAlimentos(datos.data);
       })
