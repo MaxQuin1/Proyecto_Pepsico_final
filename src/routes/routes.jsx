@@ -14,6 +14,8 @@ import Productos from "../pages/home/Productos";
 import CardProducto from "../components/CardProducto";
 import ProductosDash from "../pagesDash/ProductosDash";
 import AddProductos from '../pages/catalogsDash/AddProductos'
+import UpdateProductos from "../pages/catalogsDash/UpdateProductos";
+import DeleteProducto from "../pages/catalogsDash/DeleteProducto";
 // marcas
 import NuestrasMarcas from "../pages/home/NuestrasMarcas";
 import MarcasDash from "../pagesDash/MarcasDash";
@@ -69,6 +71,14 @@ export const rutas = createBrowserRouter([
       {
         path: "addproductos",  
         element: <AddProductos/>,
+      },
+      {
+        path: "updateproductos/:key",  
+        element: <UpdateProductos/>,
+      },
+      {
+        path: "deleteproductos/:key",  
+        element: <DeleteProducto/>,
       },
       // Rutas marcas
       {

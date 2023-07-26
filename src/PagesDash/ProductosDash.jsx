@@ -2,11 +2,12 @@ import React from "react";
 import NavDash from "../components/NavDash";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function ProductosDash() {
   const [productos, setProductos] = useState([]);
-  let c = 1;
-
+  var c = 1;
+  
   useEffect(function () {
     axios
       .get("http://localhost:3001/productos")
@@ -51,8 +52,8 @@ function ProductosDash() {
               </tr>
             </thead>
             <tbody className="">
-              {productos.map((producto) => (
-                <tr key={producto.index}>
+            {productos.map((producto,key) => (
+                <tr key={producto.id_producto}>
                   <td className="px-5">{c++}</td>
                   <td className="w-40 px-5 py-3">{producto.nombre} </td>
                   <td className="w-40"> {producto.descripcion} </td>
@@ -60,16 +61,16 @@ function ProductosDash() {
                   <td className=""> {producto.marca} </td>
                   <td className="">
                     <div className="flex flex-row">
-                    <a href="updateproductos">
-                      <button className="bg-yellow-400 hover:bg-yellow-600 text-white text-1xl font-bold mx-1">
-                        Actualizar
-                      </button>
-                    </a>
-                    <a href="eliminarproductos">
-                      <button className="bg-red-400 hover:bg-red-600 text-white text-1xl font-bold mx-1">
-                        Eliminar
-                      </button>
-                    </a>
+                      <Link to={"/updateproductos/" + key}>
+                        <button className="bg-yellow-400 hover:bg-yellow-600 text-white text-1xl font-bold mx-1">
+                          Actualizar
+                        </button>
+                      </Link>
+                      <Link to={"/deleteproductos/" + key}>
+                        <button className="bg-red-400 hover:bg-red-600 text-white text-1xl font-bold mx-1">
+                          Eliminar
+                        </button>
+                      </Link>
                     </div>
                   </td>
                 </tr>
